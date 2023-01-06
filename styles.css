@@ -1,0 +1,166 @@
+/* H1 */
+h1 {
+    text-align: center;
+    place-items: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1, 5em;
+    margin: 1%;
+    color: red;
+    text-shadow: white 0.2em 0.2em 0.2em;
+}
+
+body {
+    text-align: center;
+    place-items: center;
+    display: inline-grid;
+    place-items: center;
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;
+    background-color: black;
+}
+
+/* EXTRUCTURAS BOTONES   "simon" PADRE 
+class="title" 
+class="buttonContainer"  class="square red"
+                         class="square yellow"
+                         class="square blue"
+                         class="square green"
+class="centro"           id="startButton"
+                         id="round"
+                         id="pie"
+*/
+
+.simon {
+    text-align: center;
+    place-items: center;
+    position: relative;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* CONTENEDOR DE BOTONES COLORES DEL JUEGO EN GRID */
+.buttonContainer {
+    text-align: center;
+    display: inline-grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    transform: rotate(45deg);
+}
+
+/* ESTA CLACSE ESTA DENTRO DE LA ANTERIOR ESPEDICICA A CADA COLOR */
+.square {
+    text-align: center;
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+/* BOTON ACTIVO SE ILUMINA*/
+.square:active,
+.active {
+    filter: brightness(150);
+}
+
+/* BOTON DE COLORES EN HEX OJO PROBLEMA CON COLORES*/
+.red {
+    background-color: #ed1f06;
+    ;
+}
+
+.blue {
+    background-color: #0415f2;
+}
+
+.green {
+    background-color: #06ec56;
+}
+
+.yellow {
+    background-color: #FFEB3B;
+}
+
+/* BOTON DE STAR DESACTIVADO */
+#startButton:disabled {
+    background-color: #eee;
+}
+
+/* TITULO A USAR*/
+.title {
+    width: min-content;
+}
+
+.winner {
+    animation: spin 2s ease-in-out;
+    text-align: center;
+    place-items: center;
+
+}
+
+.centro {
+    /*Si pegamosindex.html */
+    text-align: center;
+    place-items: center;
+    display: block;
+    width: 50%;
+    margin: 90px;
+    padding: auto;
+}
+
+#startButton {
+    text-align: center;
+    text-align: justify;
+    place-items: center;
+    size: 600px;
+    font-size: 19px;
+    background-color: red;
+    border-radius: 15px;
+    cursor: pointer;
+
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1, 5em;
+    margin: 5%;
+    color: white;
+    text-shadow: black 0.2em 0.2em 0.2em;
+    /*text-shadow: blueviolet 0.2em 0.2em 0.2em;  */
+}
+
+#round {
+    text-align: center;
+    text-align: justify;
+    place-items: center;
+    size: 600px;
+    font-size: 19px;
+    background-color: red;
+    border-radius: 15px;
+    cursor: pointer;
+
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1, 5em;
+    margin: 5%;
+    color: white;
+    text-shadow: black 0.2em 0.2em 0.2em;
+}
+
+#pie {
+    color: red;
+    text-align: center;
+    font-size: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20Cpx;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(-180deg)
+    }
+}
+
+@keyframes spin2 {
+    100% {
+        transform: rotate(180deg)
+    }
+}
